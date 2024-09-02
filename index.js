@@ -42,17 +42,18 @@ const addNewGoal = () => {
     const newGoal = document.createElement('li');
     newGoal.textContent = goalInput;
 
-    goalList.appendChild(newGoal);
+    
 
         for(let i = 0; i<getGoals.length;i++){
 
             if(getGoals[i].textContent == goalInput){
                 window.alert('Goal already exists');
-                getGoals[i].remove();
+                return;
             }
+
         }
 
-
+        goalList.appendChild(newGoal);
 
 };
 
