@@ -38,7 +38,7 @@ const addNewGoal = () => {
 
     let getGoals = document.querySelectorAll('li');
     console.log(getGoals);
-    
+
     const newGoal = document.createElement('li');
     newGoal.textContent = goalInput;
 
@@ -46,7 +46,7 @@ const addNewGoal = () => {
 
         for(let i = 0; i<getGoals.length;i++){
 
-            if(getGoals[i] = goalInput){
+            if(getGoals[i].textContent == goalInput){
                 window.alert('Goal already exists');
                 getGoals[i].remove();
             }
